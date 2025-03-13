@@ -17,15 +17,41 @@
     color: #fff;
 }
 
+.header h1 a {
+    line-height: 24px;
+}
+
+.header h1 a strong {
+    font-size: 14px;
+}
+
+.header h1 a i {
+    font-size: 14px;
+}
+
+.header h1 a span {
+    font-size: 16px;
+    font-weight: 600;
+    text-shadow: 0 0 8px rgba(54, 255, 195, 0.75);
+    margin-top: 8px;
+}
+
 .header .btn {
     position: fixed;
     top: 6.4rem;
     right: 6.4rem;
     z-index: 999;
+
 }
 
-.header .btn.on svg {
-    stroke: #fff;
+.header .btn img {
+    height: 64px;
+    opacity: 0.75;
+}
+
+.header .btn.on {
+    background: url(../images/star_blue01.png) no-repeat center center;
+    height: 64px;
 }
 
 .header .cube {

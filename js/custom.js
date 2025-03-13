@@ -39,6 +39,7 @@ $(function () {
 $(function () {
     const tn = new Swiper('.training_slide', {
         slidesPerView: 1,
+        loop: true,
         navigation: {
             nextEl: ".training .arrows .next",
             prevEl: ".training .arrows .prev",

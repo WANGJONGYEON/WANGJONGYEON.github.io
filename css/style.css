@@ -450,6 +450,7 @@ svg path {
     .main_visual {
         position: relative;
         background: url(../images/trees-790220_1920.jpg) no-repeat center top;
+        height: 640px;
         overflow: hidden;
     }
 

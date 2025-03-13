@@ -450,7 +450,7 @@ svg path {
     .main_visual {
         position: relative;
         background: url(../images/trees-790220_1920.jpg) no-repeat center top;
-        height: 640px;
+        height: 100vh;
         overflow: hidden;
     }
 
@@ -461,7 +461,11 @@ svg path {
     }
 
     .main_visual .txt_box {
-        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
         z-index: 999;
     }
 
@@ -470,20 +474,21 @@ svg path {
         font-weight: 500;
         margin-bottom: 2.4rem;
         text-shadow: 0 0 8px rgba(30, 14, 255, 0.781);
-        z-index: 999;
+        white-space: nowrap;
+        /*  */
+        font-size: 10vw;
     }
 
-    .main_visual strong {
-        z-index: 999;
-    }
+    .main_visual strong {}
 
     .main_visual p {
         font-size: 14px;
         font-weight: 200;
         margin-top: 24px;
-        z-index: 999;
+
         /*  */
         font-size: 3vw;
+        word-break: keep-all;
     }
 
     .main_visual .me {
@@ -1188,7 +1193,7 @@ svg path {
 
 @media (max-width: 768px) {
     .training {
-        background: url(../images/orora.jpg);
+        background: url(../images/backstar01.jpg);
     }
 
     .training .title {}
@@ -1380,7 +1385,7 @@ svg path {
 
 @media (max-width: 768px) {
     .profile {
-        background: url(../images/orora01.jpg) no-repeat center center;
+        background: url(../images/backstar02.jpg) no-repeat center center;
     }
 
     .profile h2 {
@@ -1390,6 +1395,11 @@ svg path {
         text-align: center;
         color: #fff;
         text-shadow: 0 0 4px #fffb16d3;
+        /*  */
+        font-size: 40px;
+        text-align: left;
+        margin: 0 16px;
+        margin-bottom: 80px;
     }
 
     .profile .title_txt {
@@ -1408,6 +1418,8 @@ svg path {
         font-size: 32px;
         font-weight: 600;
         margin-bottom: 32px;
+        /*  */
+        font-size: 6vw;
     }
 
     .profile .title_txt .fx {
@@ -1415,7 +1427,8 @@ svg path {
         flex-direction: column;
         gap: 32px;
         /*  */
-        gap: 24px;
+        gap: 16px;
+
     }
 
     .profile .title_txt .fx li {
@@ -1443,6 +1456,8 @@ svg path {
     .profile .title_txt span {
         font-size: 14px;
         opacity: 0.75;
+        /*  */
+        font-size: 12px;
     }
 
     .profile .title_txt .fxf {
@@ -1452,7 +1467,8 @@ svg path {
         font-size: 14px;
         /*  */
         flex-direction: column;
-        gap: 24px;
+        gap: 12px;
+
     }
 
     .profile .title_txt .fxf li {
@@ -1476,6 +1492,10 @@ svg path {
 
     .profile .title_txt>* {
         flex: 1;
+    }
+
+    .profile .title_txt .fxf li p {
+        font-size: 12px;
     }
 }
 

@@ -1,0 +1,21 @@
+:root {
+    --body-color: #212023;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--body-color);
+    background: #000;
+}
+
+.inner {
+    max-width: 141rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.title {}

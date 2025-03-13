@@ -152,7 +152,7 @@
         color: #fff;
         /*  */
         left: 32px;
-        position: static;
+        display: none;
     }
 
     header h1 a {
@@ -471,6 +471,8 @@ svg path {
         font-weight: 200;
         margin-top: 24px;
         z-index: 999;
+        /*  */
+        font-size: 3vw;
     }
 
     .main_visual .me {
@@ -819,6 +821,8 @@ svg path {
         font-size: 14px;
     }
 
+    .portfolio .desc {}
+
     .portfolio .pt_table th {
         text-align: left;
         min-width: 120px;
@@ -855,6 +859,7 @@ svg path {
         display: flex;
         align-items: center;
         /*  */
+        align-items: stretch;
         flex-direction: column;
     }
 
@@ -872,6 +877,7 @@ svg path {
         flex-direction: column;
         justify-content: center;
         align-items: center; */
+        margin: 0 16px;
     }
 
     .portfolio.on .pt_wrap .desc {
@@ -996,6 +1002,10 @@ svg path {
 
     .portfolio02 .pt_wrap .mockup {
         order: -1;
+    }
+
+    .portfolio04 .pt_wrap .desc {
+        margin: 0 16px;
     }
 }
 
@@ -1472,4 +1482,46 @@ svg path {
 .contact {
     color: #ddd;
     text-align: center;
+}
+
+@media (max-width:768px) {
+    .footer .contact {
+        position: fixed;
+        bottom: 6.4rem;
+        left: 6.4rem;
+        z-index: 999;
+        /*  */
+        bottom: 32px;
+        left: 16px;
+    }
+
+    .footer .to_top {
+        position: fixed;
+        bottom: 80px;
+        right: -80px;
+        z-index: 999;
+        width: 32px;
+        height: 32px;
+        background: #ddd;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .to_top.on {
+        right: 80px;
+    }
+
+
+    .contact {
+        color: #ddd;
+        text-align: center;
+        opacity: 0.75;
+        font-size: 14px;
+    }
+}
+
+.fp-watermark {
+    display: none;
 }

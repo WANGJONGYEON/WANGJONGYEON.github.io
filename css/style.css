@@ -383,6 +383,8 @@
 
 .earth img {
     animation: earth 10s infinite;
+    filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
+
 }
 
 svg path {
@@ -393,14 +395,21 @@ svg path {
 @keyframes earth {
     0% {
         transform: scale(1);
+        filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0));
     }
 
     50% {
         transform: scale(0.5);
+        filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
+    }
+
+    75% {
+        filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
     }
 
     100% {
         transform: scale(1);
+        filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0));
     }
 }
 
@@ -408,10 +417,11 @@ svg path {
 
 .main_visual .moon_half {
     position: absolute;
-    top: 118px;
-    right: 48px;
-    transform: translate(-95%, 36%);
+    top: 292px;
+    left: 896px;
+
     z-index: 2;
+    width: 500px;
 }
 
 .main_visual .s::after {
@@ -426,9 +436,9 @@ svg path {
 
 .main_visual .shoot {
     position: absolute;
-    top: 50%;
-    right: -50px;
-    transform: translate(-34%, -20%);
+    top: 400px;
+    left: 500px;
+
     z-index: 1;
 }
 
@@ -439,7 +449,7 @@ svg path {
 
     .main_visual {
         position: relative;
-        background: url(../images/trees-790220_1920.jpg);
+        background: url(../images/trees-790220_1920.jpg) no-repeat center top;
         overflow: hidden;
     }
 
@@ -525,12 +535,14 @@ svg path {
 
         border-radius: 50%;
 
-
+        display: none;
     }
 
 
     .earth img {
         animation: earth 10s infinite;
+        filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
+
     }
 
     svg path {
@@ -541,14 +553,21 @@ svg path {
     @keyframes earth {
         0% {
             transform: scale(1);
+            filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0));
         }
 
         50% {
             transform: scale(0.5);
+            filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
+        }
+
+        75% {
+            filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
         }
 
         100% {
             transform: scale(1);
+            filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0));
         }
     }
 
@@ -556,10 +575,11 @@ svg path {
 
     .main_visual .moon_half {
         position: absolute;
-        top: 118px;
-        right: 48px;
-        transform: translate(-95%, 36%);
+        top: 292px;
+        left: 896px;
+
         z-index: 2;
+        width: 500px;
     }
 
     .main_visual .s::after {
@@ -574,12 +594,13 @@ svg path {
 
     .main_visual .shoot {
         position: absolute;
-        top: 50%;
-        right: -50px;
-        transform: translate(35%, -20%);
-        z-index: 1;
-    }
+        top: 400px;
+        left: 500px;
 
+        z-index: 1;
+        /*  */
+        display: none;
+    }
 }
 
 .portfolio01 {
@@ -730,6 +751,7 @@ svg path {
     opacity: 0;
     transform: translate(200px, 0);
     z-index: 1;
+    transition: 0.4s 0.4s;
 }
 
 
@@ -737,7 +759,7 @@ svg path {
 .portfolio.on .pt_wrap .mockup {
     opacity: 1;
     transform: translate(0, 0);
-    transition: 0.4s 0.4s;
+
 }
 
 .portfolio .mockup .mockup_img_p {
@@ -820,6 +842,8 @@ svg path {
         margin: 16px 0;
         font-size: 14px;
     }
+
+
 
     .portfolio .desc {}
 
@@ -948,6 +972,7 @@ svg path {
         opacity: 0;
         transform: translate(200px, 0);
         z-index: 1;
+        transition: 0.4s 0.4s;
     }
 
 
@@ -955,7 +980,7 @@ svg path {
     .portfolio.on .pt_wrap .mockup {
         opacity: 1;
         transform: translate(0, 0);
-        transition: 0.4s 0.4s;
+
     }
 
     .portfolio .mockup .mockup_img_p {
@@ -966,9 +991,9 @@ svg path {
 
         border-radius: 24px;
         /*  */
-        width: 400px;
+        width: 100%;
         height: 200px;
-        margin: 0 16px;
+
 
     }
 

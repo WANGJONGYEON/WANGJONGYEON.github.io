@@ -455,7 +455,7 @@ svg path {
     }
 
     .main_visual .inner {
-        position: relative;
+        position: static;
         text-align: center;
         color: #fff;
     }

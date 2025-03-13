@@ -150,6 +150,29 @@
         left: 6.4rem;
         z-index: 999;
         color: #fff;
+        /*  */
+        left: 32px;
+        position: static;
+    }
+
+    header h1 a {
+        line-height: 24px;
+        font-size: 14px;
+    }
+
+    .header h1 a strong {
+        font-size: 14px;
+    }
+
+    .header h1 a i {
+        font-size: 14px;
+    }
+
+    .header h1 a span {
+        font-size: 16px;
+        font-weight: 600;
+        text-shadow: 0 0 8px rgba(54, 255, 195, 0.75);
+        margin-top: 8px;
     }
 
     .header .btn {
@@ -157,6 +180,9 @@
         top: 6.4rem;
         right: 6.4rem;
         z-index: 999;
+        /*  */
+        top: 64px;
+        right: 32px;
     }
 
     .header .btn.on svg {
@@ -378,6 +404,8 @@ svg path {
     }
 }
 
+
+
 .main_visual .moon_half {
     position: absolute;
     top: 118px;
@@ -402,6 +430,154 @@ svg path {
     right: -50px;
     transform: translate(-34%, -20%);
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .section {
+        overflow: hidden;
+    }
+
+    .main_visual {
+        position: relative;
+        background: url(../images/trees-790220_1920.jpg);
+        overflow: hidden;
+    }
+
+    .main_visual .inner {
+        position: relative;
+        text-align: center;
+        color: #fff;
+    }
+
+    .main_visual .txt_box {
+        position: relative;
+        z-index: 999;
+    }
+
+    .main_visual h2 {
+        font-size: 4rem;
+        font-weight: 500;
+        margin-bottom: 2.4rem;
+        text-shadow: 0 0 8px rgba(30, 14, 255, 0.781);
+        z-index: 999;
+    }
+
+    .main_visual strong {
+        z-index: 999;
+    }
+
+    .main_visual p {
+        font-size: 14px;
+        font-weight: 200;
+        margin-top: 24px;
+        z-index: 999;
+    }
+
+    .main_visual .me {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 40rem;
+        height: 40rem;
+        border-radius: 50%;
+
+        transform: translate(0, -50%);
+
+        overflow: hidden;
+    }
+
+
+
+    .main_visual .s {
+        position: relative;
+        width: 1200px;
+        font-size: 0;
+        margin-top: 80px;
+    }
+
+    .main_visual .s::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0, -50%);
+        width: 80px;
+        height: 80px;
+        background: url(../images/rocket03.png) no-repeat center center;
+        border-radius: 50%;
+        z-index: 1;
+
+    }
+
+    .earth {
+        position: fixed;
+        top: -100px;
+        right: -100px;
+
+        width: 100px;
+        height: 100px;
+
+        font-size: 0;
+        /* background: url(../images/earth_mini.png); */
+
+        border-radius: 50%;
+
+
+    }
+
+
+    .earth img {
+        animation: earth 10s infinite;
+    }
+
+    svg path {
+        stroke: rgba(255, 255, 255, 0.1);
+    }
+
+
+    @keyframes earth {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(0.5);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+
+    .main_visual .moon_half {
+        position: absolute;
+        top: 118px;
+        right: 48px;
+        transform: translate(-95%, 36%);
+        z-index: 2;
+    }
+
+    .main_visual .s::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(to right, transparent, #fff);
+        border-radius: 100% 0px 0px 100%;
+    }
+
+    .main_visual .shoot {
+        position: absolute;
+        top: 50%;
+        right: -50px;
+        transform: translate(35%, -20%);
+        z-index: 1;
+    }
+
 }
 
 .portfolio01 {
@@ -824,10 +1000,14 @@ svg path {
 }
 
 .training {
+    position: relative;
     background: url(../images/orora.jpg);
 }
 
-.training .title {}
+.training .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
 .training h2 {
     color: #fff;
@@ -836,25 +1016,60 @@ svg path {
 
 }
 
-.training .inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*  */
-    gap: 24px;
-}
+.training .inner {}
 
 .training .more_box {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    margin-top: 40px;
+    margin-top: 40px; */
+
     /*  */
 
+    overflow: hidden;
+
+}
+
+.training .more_box .swiper-wrapper {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px; */
+
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.training .more_box .swiper-wrapper>* {
+    flex: 1 0 400px;
+}
+
+@media (max-width: 768px) {
+    .training .more_box .swiper-wrapper {
+        /* display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 40px; */
+
+        flex-wrap: wrap;
+        gap: 30px;
+        /*  */
+        flex-wrap: nowrap;
+        gap: 0;
+
+    }
+
+    .training .more_box .swiper-wrapper>* {
+        flex: 1 0 400px;
+        /*  */
+        flex: 1 0 450px;
+        flex: 1 0 100%;
+    }
 }
 
 .training .more_box figure {
     position: relative;
+
 }
 
 /* .training .more_box figure::before {
@@ -871,6 +1086,7 @@ svg path {
 
 .training .more_box img {
     border-radius: 8px 8px 0 0;
+
 }
 
 .training .more_box a {
@@ -907,6 +1123,33 @@ svg path {
     z-index: 999;
 }
 
+.training .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 1600px;
+    width: 100%;
+    z-index: 4;
+    display: none;
+}
+
+.training .arrows button {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.training .arrows .prev {
+    left: 0;
+}
+
+.training .arrows .next {
+    right: 0;
+}
+
 @media (max-width: 768px) {
     .training {
         background: url(../images/orora.jpg);
@@ -921,24 +1164,6 @@ svg path {
 
     }
 
-    .training .inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        /*  */
-        gap: 24px;
-    }
-
-    .training .more_box {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-        margin-top: 40px;
-        /*  */
-
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0 16px;
-    }
 
     .training .more_box figure {
         position: relative;
@@ -992,6 +1217,35 @@ svg path {
         bottom: 6.4rem;
         right: 6.4rem;
         z-index: 999;
+    }
+
+    .training .arrows {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 1600px;
+        width: 100%;
+        z-index: 4;
+        display: none;
+        /*  */
+        display: block;
+    }
+
+    .training .arrows button {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+
+    .training .arrows .prev {
+        left: 0;
+    }
+
+    .training .arrows .next {
+        right: 0;
     }
 }
 

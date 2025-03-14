@@ -7,7 +7,17 @@
     outline: 1px solid tomato;
 } */
 
+/* @media (max-width: 1200px) {
+    * {
+        overflow: hidden;
+    }
+} */
 
+
+
+body {
+    overflow-x: hidden !important;
+}
 
 .header h1 {
     position: fixed;
@@ -141,6 +151,146 @@
     line-height: 56px;
     color: #fff;
     text-shadow: 0 0 3px #fffb16d3;
+}
+
+@media (max-width: 1200px) {
+    .header h1 {
+        position: fixed;
+        top: 6.4rem;
+        left: 6.4rem;
+        z-index: 999;
+        color: #fff;
+        /*  */
+        display: none
+    }
+
+    .header h1 a {
+        line-height: 24px;
+    }
+
+    .header h1 a strong {
+        font-size: 14px;
+    }
+
+    .header h1 a i {
+        font-size: 14px;
+    }
+
+    .header h1 a span {
+        font-size: 16px;
+        font-weight: 600;
+        text-shadow: 0 0 8px rgba(54, 255, 195, 0.75);
+        margin-top: 8px;
+    }
+
+    .header .btn {
+        position: fixed;
+        top: 6.4rem;
+        right: 6.4rem;
+        z-index: 999;
+
+    }
+
+    .header .btn img {
+        height: 64px;
+        opacity: 0.75;
+    }
+
+    .header .btn.on {
+        background: url(../images/star_blue01.png) no-repeat center center;
+        height: 64px;
+    }
+
+    .header .cube {
+        position: fixed;
+        top: 6.4rem;
+        right: 24rem;
+        z-index: 999;
+
+        width: 12rem;
+        height: 12rem;
+
+        transform: rotate(20deg);
+    }
+
+    .header .side_nav {
+        position: fixed;
+        top: 50%;
+        right: 6.4rem;
+        z-index: 999;
+
+
+        transform: translate(0, -50%);
+        /*  */
+        display: none;
+    }
+
+    .header .side_nav li {
+        position: relative;
+        height: 32px;
+    }
+
+    .header .side_nav li a {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        height: 6px;
+        width: 6px;
+
+        font-size: 0;
+
+
+        background: #ddd;
+        border-radius: 0;
+        transition: 0.4s;
+    }
+
+    .header .side_nav li.on a {
+        position: absolute;
+        top: 0;
+        left: auto;
+        height: 6px;
+        width: 32px;
+        text-align: right;
+        background: #ddd;
+
+    }
+
+
+
+    .header .cover_lnk {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(29.3% at 50% 50%);
+        background: url(../images/don.png) no-repeat center center;
+        transition: 0.5s;
+        opacity: 0;
+        visibility: hidden;
+        text-align: center;
+    }
+
+    .header .cover_lnk.on {
+        height: 100vh;
+        clip-path: circle(29.3% at 50% 50%);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .header .cover_lnk a {
+        display: block;
+        font-size: 24px;
+        line-height: 56px;
+        color: #fff;
+        text-shadow: 0 0 3px #fffb16d3;
+    }
 }
 
 @media (max-width: 768px) {
@@ -442,6 +592,165 @@ svg path {
     z-index: 1;
 }
 
+@media (max-width: 1200px) {
+    .section {
+        overflow: hidden;
+    }
+
+    .main_visual {
+        position: relative;
+        background: url(../images/trees-790220_1920_01.jpg) no-repeat right 50% center;
+        overflow: hidden;
+
+    }
+
+    .main_visual .inner {
+        position: relative;
+        text-align: center;
+        color: #fff;
+    }
+
+    .main_visual .txt_box {
+        position: relative;
+        z-index: 999;
+    }
+
+    .main_visual h2 {
+        font-size: 4rem;
+        font-weight: 500;
+        margin-bottom: 2.4rem;
+        text-shadow: 0 0 8px rgba(30, 14, 255, 0.781);
+        z-index: 999;
+    }
+
+    .main_visual strong {
+        z-index: 999;
+    }
+
+    .main_visual p {
+        font-size: 14px;
+        font-weight: 200;
+        margin-top: 24px;
+        z-index: 999;
+    }
+
+    .main_visual .me {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        width: 40rem;
+        height: 40rem;
+        border-radius: 50%;
+
+        transform: translate(0, -50%);
+
+        overflow: hidden;
+    }
+
+
+
+    .main_visual .s {
+        position: relative;
+        width: 1200px;
+        font-size: 0;
+        margin-top: 80px;
+    }
+
+    .main_visual .s::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(0, -50%);
+        width: 80px;
+        height: 80px;
+        background: url(../images/rocket03.png) no-repeat center center;
+        border-radius: 50%;
+        z-index: 1;
+
+    }
+
+    .earth {
+        position: fixed;
+        top: -100px;
+        right: -100px;
+
+        width: 100px;
+        height: 100px;
+
+        font-size: 0;
+        /* background: url(../images/earth_mini.png); */
+
+        border-radius: 50%;
+
+
+    }
+
+
+    .earth img {
+        animation: earth 10s infinite;
+        filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
+
+    }
+
+    svg path {
+        stroke: rgba(255, 255, 255, 0.1);
+    }
+
+
+    @keyframes earth {
+        0% {
+            transform: scale(1);
+            filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0));
+        }
+
+        50% {
+            transform: scale(0.5);
+            filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
+        }
+
+        75% {
+            filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0.5));
+        }
+
+        100% {
+            transform: scale(1);
+            filter: drop-shadow(100px 0 10px rgba(0, 0, 0, 0));
+        }
+    }
+
+
+
+    .main_visual .moon_half {
+        position: absolute;
+        top: 332px;
+        left: 441px;
+
+        z-index: 2;
+        width: 500px;
+    }
+
+    .main_visual .s::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(to right, transparent, #fff);
+        border-radius: 100% 0px 0px 100%;
+    }
+
+    .main_visual .shoot {
+        position: absolute;
+        top: 462px;
+        left: 100px;
+
+        z-index: 1;
+
+    }
+}
+
 @media (max-width: 768px) {
     .section {
         overflow: hidden;
@@ -449,7 +758,7 @@ svg path {
 
     .main_visual {
         position: relative;
-        background: url(../images/trees-790220_1920.jpg) no-repeat center top;
+        background: url(../images/trees-790220_1920.jpg) no-repeat center top 25%;
         height: 100vh;
         overflow: hidden;
     }
@@ -815,6 +1124,218 @@ svg path {
     order: -1;
 }
 
+@media (max-width: 1200px) {
+    .portfolio01 {
+        background: url(../images/backstar01.jpg);
+    }
+
+    .portfolio02 {
+        background: url(../images/backstar02.jpg);
+    }
+
+    .portfolio03 {
+        background: url(../images/backstar04.jpg);
+    }
+
+    .portfolio04 {
+        background: url(../images/backstar03.jpg);
+    }
+
+    .portfolio h2 {
+        margin-bottom: 32px;
+    }
+
+    .portfolio h2 strong {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 40px;
+        font-weight: 600;
+    }
+
+    .portfolio .pt_table {
+        margin: 48px 0;
+    }
+
+    .portfolio .pt_table th {
+        text-align: left;
+        min-width: 120px;
+        height: 32px;
+        font-weight: 700;
+    }
+
+    .portfolio .pt_table span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        font-size: 0;
+        border-radius: 50%;
+        margin-right: 8px;
+        vertical-align: top;
+        border: 1px solid #333;
+    }
+
+    .portfolio .lnk_btn {
+        display: inline-flex;
+        height: 48px;
+        align-items: center;
+        padding: 0 32px;
+        background: rgb(17, 0, 255, 0.25);
+        color: #fff;
+        border-radius: 16px;
+    }
+
+    .portfolio .pt_wrap {
+        display: flex;
+        align-items: center;
+        /*  */
+        flex-direction: column;
+        align-items: stretch;
+        margin: 0 64px;
+    }
+
+    .portfolio .pt_wrap>* {
+        flex: 1;
+    }
+
+    .portfolio .pt_wrap .desc {
+
+        position: relative;
+        opacity: 0;
+        /* transform: translate(0, 200px); */
+        color: #fff;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .portfolio.on .pt_wrap .desc {
+        opacity: 1;
+        transform: translate(0, 0);
+        transition: 1s;
+        margin-bottom: 24px;
+    }
+
+    .portfolio .pt_wrap .glass {
+        position: absolute;
+        top: 120px;
+        left: 120px;
+        transform: translate(-20%, -20%);
+        opacity: 0.7;
+    }
+
+
+
+    .portfolio02 .pt_wrap .glass {
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translate(85%, -15%);
+        opacity: 0.7;
+    }
+
+    /* .portfolio .pt_wrap .desc::before {
+        content: "";
+        position: absolute;
+        top: -150px;
+        left: 20px;
+        width: 700px;
+        height: 700px;
+        background: url(../images/memojpg.png);
+        z-index: -1;
+    } */
+
+    .portfolio02 .pt_wrap .desc {
+        color: #fff;
+
+        position: relative;
+        opacity: 0;
+        /* transform: translate(0, 200px); */
+
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; */
+
+    }
+
+
+
+    /* .portfolio02 .pt_wrap .desc::before {
+        content: "";
+        position: absolute;
+        top: -150px;
+        left: -70px;
+        width: 700px;
+        height: 700px;
+        background: url(../images/memojpg.png);
+        z-index: -1;
+    } */
+
+
+
+    .portfolio .pt_wrap .mockup {
+        opacity: 0;
+        transform: translate(200px, 0);
+        z-index: 1;
+        transition: 0.4s 0.4s;
+    }
+
+
+
+    .portfolio.on .pt_wrap .mockup {
+        opacity: 1;
+        transform: translate(0, 0);
+
+    }
+
+    .portfolio .mockup .mockup_img_p {
+
+        width: 700px;
+        height: 400px;
+        overflow: hidden;
+
+        border-radius: 24px;
+
+    }
+
+
+
+
+    .portfolio .mockup .mockup_img_p .img_box img {
+        transition: 8s;
+    }
+
+
+    .portfolio .mockup .mockup_img_p .img_box:hover img {
+        transform: translate(0, calc(-100% + 400px));
+    }
+
+
+
+    .portfolio02 .pt_wrap .desc {
+        text-align: right;
+        /*  */
+        text-align: left;
+        margin-top: 24px;
+    }
+
+
+
+    .portfolio02 .pt_wrap .pt_table {
+        display: flex;
+        justify-content: end;
+        /*  */
+        justify-content: start;
+
+    }
+
+    .portfolio02 .pt_wrap .mockup {
+        order: -1;
+    }
+
+}
+
 @media (max-width: 768px) {
     .portfolio01 {
         background: url(../images/backstar01.jpg);
@@ -899,6 +1420,7 @@ svg path {
         /*  */
         align-items: stretch;
         flex-direction: column;
+        margin: 0;
     }
 
     .portfolio .pt_wrap>* {
@@ -915,6 +1437,8 @@ svg path {
         flex-direction: column;
         justify-content: center;
         align-items: center; */
+        margin: 0 16px;
+        /*  */
         margin: 0 16px;
     }
 
@@ -1018,6 +1542,7 @@ svg path {
         transition: 8s;
         /*  */
         transition: none;
+
     }
 
 
@@ -1091,6 +1616,30 @@ svg path {
 
 .training .more_box .swiper-wrapper>* {
     flex: 1 0 400px;
+}
+
+@media (max-width: 1200px) {
+
+
+    .training .more_box .swiper-wrapper {
+        /* display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 40px; */
+
+        flex-wrap: wrap;
+        gap: 30px;
+        /*  */
+        flex-wrap: nowrap;
+        gap: 0;
+
+    }
+
+    .training .more_box .swiper-wrapper>* {
+        flex: 1 0 400px;
+        /*  */
+        flex: 1 0 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1197,6 +1746,126 @@ svg path {
 
 .training .arrows .next {
     right: 0;
+}
+
+@media (max-width: 1200px) {
+    .training {
+        position: relative;
+        background: url(../images/backstar01.jpg);
+    }
+
+    .training .title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .training h2 {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
+
+    }
+
+    .training .inner {}
+
+    .training .more_box {
+        /* display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin-top: 40px; */
+
+        /*  */
+
+        overflow: hidden;
+        /*  */
+
+
+    }
+
+    .training .more_box figure {
+        position: relative;
+
+    }
+
+    /* .training .more_box figure::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        width: 64px;
+        height: 64px;
+        background: url(../images/moon01.png) no-repeat center center;
+    } */
+
+    .training .more_box img {
+        border-radius: 8px 8px 0 0;
+
+    }
+
+    .training .more_box a {
+
+        display: block;
+        border-radius: 8px 8px 0 0;
+        background: #f4e39e;
+        /* box-shadow: 0 0 16px rgba(255, 255, 255, 0.75); */
+    }
+
+    .training .more_box .txt_box {
+        padding: 24px 0;
+        color: #333;
+        font-weight: 600;
+        margin: 0 16px;
+        text-align: center;
+    }
+
+    .training .pin {
+        position: absolute;
+        top: 180px;
+        left: 50%;
+        transform: translate(0, 50%);
+    }
+
+    .training .more_box .pin img {
+        height: 64px;
+    }
+
+    .training .more_box .footer .to_top {
+        position: fixed;
+        bottom: 6.4rem;
+        right: 6.4rem;
+        z-index: 999;
+    }
+
+    .training .arrows {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 1600px;
+        width: 100%;
+        z-index: 4;
+        display: none;
+        /*  */
+        display: block;
+    }
+
+    .training .arrows button {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        border: 1px solid #ddd;
+        background: #fff;
+    }
+
+    .training .arrows .prev {
+        left: 0;
+    }
+
+    .training .arrows .next {
+        right: 0;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1391,6 +2060,105 @@ svg path {
     flex: 1;
 }
 
+@media (max-width: 1200px) {
+    .profile {
+        background: url(../images/backstar022.jpg) no-repeat center center;
+    }
+
+    .profile .inner {}
+
+    .profile h2 {
+        display: block;
+        font-size: 64px;
+        margin-bottom: 80px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 0 0 4px #fffb16d3;
+    }
+
+    .profile .title_txt {
+
+        display: flex;
+        color: #fff;
+        /*  */
+        display: flex;
+
+        margin-left: 48px;
+    }
+
+
+
+    .profile .title_txt h3 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 32px;
+    }
+
+    .profile .title_txt .fx {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .profile .title_txt .fx li {
+        position: relative;
+    }
+
+    .profile .title_txt .fx li::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -16px;
+        transform: translate(0, -50%);
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50%;
+        /*  */
+
+    }
+
+    .profile .title_txt strong {
+        font-weight: 600;
+    }
+
+    .profile .title_txt span {
+        font-size: 14px;
+        opacity: 0.75;
+    }
+
+    .profile .title_txt .fxf {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        font-size: 14px;
+    }
+
+    .profile .title_txt .fxf li {
+        position: relative;
+    }
+
+    .profile .title_txt .fxf li::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -16px;
+        transform: translate(0, -50%);
+        width: 4px;
+        height: 4px;
+        background: #fff;
+        border-radius: 50%;
+        /*  */
+
+    }
+
+
+    .profile .title_txt>* {
+        flex: 1;
+    }
+}
+
 @media (max-width: 768px) {
     .profile {
         background: url(../images/backstar02.jpg) no-repeat center center;
@@ -1417,6 +2185,9 @@ svg path {
         /*  */
         flex-direction: column;
         gap: 32px;
+        margin: 0 16px;
+
+        /*  */
         margin: 0 16px;
     }
 

@@ -513,7 +513,10 @@ svg path {
 
 
     .main_visual .s {
-        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 1200px;
         font-size: 0;
         margin-top: 80px;

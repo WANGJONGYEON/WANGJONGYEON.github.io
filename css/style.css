@@ -599,7 +599,7 @@ svg path {
 
     .main_visual {
         position: relative;
-        background: url(../images/trees-790220_1920_01.jpg) no-repeat right 50% center;
+        background: url(../images/trees-790220_1920_01.jpg) no-repeat right 50% top 50%;
         overflow: hidden;
 
     }
@@ -724,8 +724,8 @@ svg path {
 
     .main_visual .moon_half {
         position: absolute;
-        top: 332px;
-        left: 441px;
+        top: 129px;
+        left: 495px;
 
         z-index: 2;
         width: 500px;
@@ -743,7 +743,7 @@ svg path {
 
     .main_visual .shoot {
         position: absolute;
-        top: 462px;
+        top: 260px;
         left: 100px;
 
         z-index: 1;

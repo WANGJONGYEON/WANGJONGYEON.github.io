@@ -13,8 +13,9 @@ $(function () {
     $('.wrapper').fullpage({
         anchors: ['intro', 'portfolio01', 'portfolio02', 'portfolio03', 'portfolio04', 'training', 'profile',],
         fixedElements: '.header, .footer',
-        menu: '#menu',
+        //menu: '#menu',
         responsiveWidth: 1200,
+        scrollOverflow: false,
         onLeave: function (o, d, dr) {
             let idx = d.index;
             if (idx == 0) {
@@ -37,19 +38,21 @@ $(function () {
 })
 
 $(function () {
-    const tn = new Swiper('.training_slide', {
+    const trn = new Swiper('.training_slide', {
         slidesPerView: 1,
         loop: true,
+
         navigation: {
             nextEl: ".training .arrows .next",
             prevEl: ".training .arrows .prev",
         },
         breakpoints: {
 
-            768: {
+            1200: {
                 slidesPerView: 6,
                 spaceBetween: 40,
             },
+
 
         },
     });

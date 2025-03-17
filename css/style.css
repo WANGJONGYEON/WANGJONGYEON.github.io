@@ -42,14 +42,14 @@ body {
 .header h1 a span {
     font-size: 16px;
     font-weight: 600;
-    text-shadow: 0 0 8px rgba(54, 255, 195, 0.75);
+    text-shadow: 0 0 12px rgba(9, 255, 181, 1);
     margin-top: 8px;
 }
 
 .header .btn {
     position: fixed;
     top: 6.4rem;
-    right: 6.4rem;
+    right: 5.6rem;
     z-index: 999;
 
 }
@@ -567,8 +567,8 @@ svg path {
 
 .main_visual .moon_half {
     position: absolute;
-    top: 292px;
-    left: 896px;
+    top: 296px;
+    left: 897px;
 
     z-index: 2;
     width: 500px;

@@ -331,8 +331,8 @@ body {
         right: 6.4rem;
         z-index: 999;
         /*  */
-        top: 64px;
-        right: 32px;
+        top: 32px;
+        right: 16px;
     }
 
     .header .btn.on svg {

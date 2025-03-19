@@ -1295,7 +1295,7 @@ svg path {
     .portfolio .mockup .mockup_img_p {
 
         width: 700px;
-        height: 400px;
+        height: 320px;
         overflow: hidden;
 
         border-radius: 24px;
@@ -1532,10 +1532,11 @@ svg path {
 
         border-radius: 24px;
         /*  */
-        width: 100%;
+        width: calc(100% - 32px);
         height: 200px;
 
-
+        margin-left: 16px;
+        border-radius: 8px;
     }
 
 
